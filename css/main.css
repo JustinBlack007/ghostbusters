@@ -1,0 +1,623 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.no-scrole {
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    height: 104px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.button-next {
+    display: none;
+    z-index: 99;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.m-menu {
+    display: none;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.m-menu.active {
+    display: flex;
+}
+
+.logo {
+    padding: 0 34px;
+    border-right: 1px solid #d4d4d4;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    height: 100%;
+    background-color: #d4d4d4;
+    width: 1px;
+}
+
+.search-input {
+    margin-right: auto;
+    margin-left: 34px;
+    background-image: url(../img/search-icon.svg);
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    padding-left: 38px;
+    border: none;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #A5A5A5;
+}
+
+.navigation {
+    margin-left: auto;
+    margin-right: 44px;
+}
+
+.navigation-link {
+    text-decoration: none;
+    margin-right: 18px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #A5A5A5;
+}
+
+.button-group {
+    height: 100%;
+    display: flex;
+}
+
+.button {
+    height: 100%;
+    cursor: pointer;
+    flex-basis: 50%;
+}
+
+.sign-up {
+    border: none;
+    background: #fff;
+    color: #5671F6;
+    border-left: 1px solid #d4d4d4;
+    padding: 0 34px;
+}
+
+.login {
+    border: none;
+    background-color: #5671F6;
+    color: #fff;
+    padding: 0 50px;   
+}
+
+.mobile-buttons {
+    display: none;
+}
+
+.m-menu-button, .search-button {
+    border: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+}
+
+.search-button {
+    margin-right: 30px;
+}
+
+.menu-line {
+    border-radius: 40px;
+    display: block;
+    height: 2px;
+    width: 16px;
+    background-color: #000000;
+    margin-top: 2px;
+}
+
+.film {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.contanier {
+    max-width: 1130px;
+    margin: 0 auto;
+}
+
+.film-wrapper {
+    display: flex;
+}
+
+.film-trailer {
+    display: flex;
+    flex-direction: column;
+}
+
+.poster {
+    border-radius: 5px 5px 0 0;
+    max-width: 358px;
+}
+
+.trailer-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid #d4d4d4;
+    border-radius: 0 0 5px 5px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-decoration: none;
+}
+
+.trailer-button-icon {
+    margin-right: 14px;
+}
+
+.film-text {
+    margin-left: 60px;
+}
+
+.film-title {
+    margin: 0;
+    color: #363636;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 16px;
+}
+
+.film-subtitle {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #A5A5A5;
+    line-height: 21px;
+    margin-bottom: 32px;
+    display: block;
+}
+
+.film-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    color: #000;
+    width: 514px;
+    margin-bottom: 50px;
+}
+
+.about-film {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.about-text {
+    display: block;
+}
+.about-text-bold {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+
+.about-text-regular {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #363636;
+}
+
+.left-side {
+    margin-right: 40px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+.rating-counter {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5671F6;
+    border-radius: 10px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    color: #5671F6;
+    margin-right: 28px;
+}
+
+.rating-title {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #363636;
+}
+
+.rating-text {
+    display: block;
+    margin-bottom: 7px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #363636;
+}
+
+.tabs {
+    display: flex;
+    margin-top: 60px;
+}
+
+.tab {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+    color: #A5A5A5;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.tab.active {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    color: #363636
+}
+
+.content-tab {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    visibility: hidden;
+    display: none;
+}
+
+.content-tab.visible {
+    visibility: visible;
+    display: flex;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 35px;
+    flex-basis: 25%;
+}
+
+.avatar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.name {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #5671F6;
+    margin-bottom: 6px;
+}
+
+.eng-name {
+    font-size: 16px;
+    line-height: 19px;
+    color: #A5A5A5;
+}
+
+.news {
+    background-color: #f3f3f3;
+    padding-top: 70px;
+    padding-bottom: 100px;
+}
+
+.section-title {
+    margin-bottom: 65px;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.news-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.news-card {
+    border-radius: 5px;
+    flex-basis: 23%;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.news-date {
+    margin-bottom: 14px;
+}
+
+.news-title {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 16px;  
+}
+
+@media (max-width: 1200px) {
+    .film-description {
+        width: 100%;
+    }
+    .contanier {
+        max-width: 960px;
+    }
+    .avatar {
+        width: 70px;
+        height: 70px;
+    }
+    .navigation {
+        margin-right: 20px;
+    }
+    navigation-link {
+        margin-right: 10px;
+        font-size: 16px;
+    }
+    .search-input {
+        margin-left: 20px;
+    }
+    header {
+       height: 90px;
+    }
+    .sign-up {
+        padding: 0 20px;
+    }
+    .logo {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1008px) {
+    .contanier {
+        max-width: 760px;
+    }
+    .film-title {
+        font-size: 24px;
+        line-height: 1.4;   
+    }
+    .film-subtitle {
+        margin-bottom: 20px;
+    }
+    .film-description, .about-film {
+        margin-bottom: 30px;
+    }
+    .about-text-bold {
+        display: block;
+        margin-bottom: 10%;
+    }
+    .about-text {
+        margin-bottom: 10px;
+    }
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
+    .card {
+        flex-basis: 50%;
+    }
+    .news-card {
+        flex-basis: 48%;
+        margin-bottom: 20px;
+    }
+    .navigation {
+        display: none;
+    }
+    .search-input {
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .button-next {
+        display: block;
+    }
+    .m-menu {
+        position: fixed;
+        left: 0;
+        top: 70px;
+        right: 0;
+        bottom: 0;
+        background: #5671F6;
+        flex-direction: column;
+        justify-content: space-around;
+        height: calc(100% - 70px);
+    }
+    .button-group {
+        height: auto;
+        flex-direction: column;
+    }
+    .sign-up {
+        background-color: transparent;
+        border: none;
+        margin-bottom: 30px;
+        color: white;
+    }
+    .search-input {
+        margin: 0;
+        background-image: none;
+        width: 260px;
+        height: 50px;
+        border-radius: 5px;
+        border: none;
+    }
+    .navigation-link {
+        color: #fff;
+        margin-bottom: 18px;
+        margin-right: 0;
+    }
+    .mobile-buttons {
+        margin-left: auto;
+    }
+    .navigation-link:last-child {
+        margin-bottom: 0;
+    }
+    .navigation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+    }
+    .contanier {
+        max-width: 560px;
+    }
+    .film {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+    .film-wrapper {
+        flex-wrap: wrap;
+    }
+    .film-text {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    .actors {
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+    .news {
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
+    header {
+        height: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contanier {
+        max-width: 95%;
+    }
+    .film-text {
+        order: 1;
+        margin-bottom: 0;
+    }
+    .film-trailer {
+        width: 100%;
+    }
+    .logo {
+        border: 0;
+    }
+    .poster {
+        margin: 0 auto;
+        width: 100%;
+    }
+    .trailer-button {
+        width: 358px;
+        margin: 0 auto;
+    }
+    header {
+        padding-right: 2.5%;
+        padding-left: 2.5%;
+    }
+    .mobile-buttons {
+        display: flex;
+    }
+    .film-title {
+        margin-top: 30px;
+        font-size: 20px;
+        line-height: 23px;
+        margin-bottom: 12px;
+    }
+    .film-subtitle {
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 26px;
+    }
+    .film-description {
+        width: 100%;
+    }
+    .about-text-bold {
+        font-size: 16px;
+        line-height: 19px;
+        display: inline-block;
+    }
+    .about-text-regular {
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .about-film {
+        flex-direction: column;
+    }
+    .about-text {
+        margin-bottom: 16px;
+    }
+    .tabs {
+        margin-left: 28px;
+    }
+    .tab {
+        font-size: 18px;
+        line-height: 21px;
+        margin-right: 20px;
+    }
+    .tab.active {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 21px;
+    }
+    .actors {
+        padding-left: 28px;
+    }
+    .card {
+        flex-basis: 100%;
+    }
+    .avatar {
+        width: 60px;
+        height: 60px;
+    }
+    .section-title {
+        font-size: 20px;
+        line-height: 23px;
+        margin-left: 28px;
+    }
+    .news-card {
+        flex-basis: 100%;
+    }
+}
